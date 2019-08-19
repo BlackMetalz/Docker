@@ -21,7 +21,7 @@ rsync -aqxP /var/lib/docker/ /data1/docker
 - Start service and Done
 
 
-### Change default subnet of docker to avoid conflict with real network. Example i have real ip with subnet 172.18.0.0.
+### Change default subnet of docker to avoid conflict with real network. Example i have real ip with subnet 172.17.0.0.
 - Show current route:
 
 ```
@@ -31,7 +31,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 default         gateway         0.0.0.0         UG    0      0        0 bond0
 link-local      0.0.0.0         255.255.0.0     U     1004   0        0 bond0
 169.254.169.250 0.0.0.0         255.255.255.255 UH    0      0        0 docker0
-172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
 192.168.23.0    0.0.0.0         255.255.255.0   U     0      0        0 bond0
 ```
 
@@ -43,7 +43,7 @@ service docker stop
 - delete that route
 
 ```
-route del -net 172.18.0.0/16 gw 0.0.0.0 docker0
+route del -net 172.17.0.0/16 gw 0.0.0.0 docker0
 ```
 
 - Update or create new file with content: `/etc/docker/daemon.json`
