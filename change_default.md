@@ -18,8 +18,7 @@ service docker stop
 mkdir /data1/docker
 rsync -aqxP /var/lib/docker/ /data1/docker
 ```
-
-Done
+- Start service and Done
 
 
 ### Change default subnet of docker to avoid conflict with real network. Example i have real ip with subnet 172.18.0.0.
