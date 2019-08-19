@@ -8,7 +8,7 @@ service docker stop
 - Edit or create new file `/etc/docker/daemon.json` with content:
 ```
 {
-"data-root": "/new/data/root/path"
+"data-root": "/data1/docker"
 }
 ```
 
