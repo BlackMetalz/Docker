@@ -15,8 +15,8 @@ service docker stop
 - Create new folder location for docker and rsync old data of docker to new location of docker
 
 ```
-mkdir /new/path/docker
-rsync -aqxP /var/lib/docker/ /new/path/docker
+mkdir /data1/docker
+rsync -aqxP /var/lib/docker/ /data1/docker
 ```
 
 Done
