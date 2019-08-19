@@ -50,7 +50,7 @@ route del -net 172.18.0.0/16 gw 0.0.0.0 docker0
 
 ```
 {
-"bip": "172.26.0.1/16"
+"bip": "172.29.0.1/24"
 }
 ```
 
@@ -64,7 +64,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 default         gateway         0.0.0.0         UG    0      0        0 bond0
 link-local      0.0.0.0         255.255.0.0     U     1004   0        0 bond0
 169.254.169.250 0.0.0.0         255.255.255.255 UH    0      0        0 docker0
-172.26.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.29.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
 192.168.23.0    0.0.0.0         255.255.255.0   U     0      0        0 bond0
 
 ```
