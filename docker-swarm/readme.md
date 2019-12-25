@@ -11,6 +11,8 @@ q35qwrfqwqw        platform-zzz-aerospike-9.24   Ready               Active     
 23523rqfqffqwfwef  platform-zzz-aerospike-9.25   Ready               Active                                  19.03.1
 ```
 
+reachable / leader in manager status mean you can config docker node from them same with command `docker service ls```
+
 - Show all stack available
 ```
 root@asd-group-aerospike-9:/data/softs/aerospike-docker-swarm# docker stack ls
