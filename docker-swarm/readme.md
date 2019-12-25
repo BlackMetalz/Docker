@@ -34,8 +34,15 @@ as-cluster-4000     1                   Swarm
 
 ```
  docker stack ls
+ docker secret ls
  docker stack rm aer-cluster-7000
+ docker secret rm aer-cluster-7000
  docker stack deploy -c aerospike.yml aer-cluster-7000
+ ```
+ 
+ - Check docker service status
+ ```
+ docker service ls
  ```
  
  - debug if docker service doesn't up:
