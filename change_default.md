@@ -68,3 +68,14 @@ link-local      0.0.0.0         255.255.0.0     U     1004   0        0 bond0
 192.168.23.0    0.0.0.0         255.255.255.0   U     0      0        0 bond0
 
 ```
+
+-- Complete with limit log driver
+```
+	"data-root": "/data/docker", 
+	"bip": "172.18.0.1/24",
+	"log-driver": "json-file",
+  		"log-opts": {
+    			"max-size": "100m",
+    			"max-file": "3"
+ 		 }
+```
